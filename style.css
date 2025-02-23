@@ -1,0 +1,342 @@
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.7fr 3fr;
+
+}
+
+.main {
+    grid-column: 2 / 3;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.main h3 {
+    margin-bottom: 1rem;
+}
+
+.main h5 {
+    margin-bottom: 0.4rem;
+}
+
+.header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.9fr 1fr;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 1);
+
+}
+
+.upper-section {
+    display: flex;
+    align-items: center;
+    padding: 0 50px 0 50px;
+    justify-content: space-between;
+}
+
+.upper-section form {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.upper-section>.up-left-part {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    margin-right: 50px;
+}
+
+.search-input {
+    width: 80%;
+    height: 1rem;
+    padding: 15px;
+    border: hidden;
+    border-radius: 50px;
+    background-color: whitesmoke;
+}
+
+.search-button {
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: dodgerblue;
+    padding: 5px;
+}
+
+.search-button svg {
+    fill: dodgerblue;
+}
+
+.lower-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 10px 50px;
+}
+
+.lower-section>.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lower-section>.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-right: 40px;
+}
+
+
+.greeting>h2 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-top: 1rem;
+}
+
+.lower-section>.control-buttons>button {
+    padding: 15px 40px 15px 40px;
+    border-radius: 50px;
+    background-color: dodgerblue;
+    color: white;
+    border: 3px solid dodgerblue;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.lower-section>.control-buttons>button:hover {
+    color: dodgerblue;
+    background-color: white;
+}
+
+.header svg {
+    width: 2em;
+    height: 2em;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.card-grid .card {
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid gold;
+    padding: 20px;
+    box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 1);
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.card .card-icons {
+    align-self: end;
+    justify-self: end;
+}
+
+.card-icons>svg {
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 5px;
+}
+
+.card-icons>svg:hover {
+    fill: gold;
+}
+
+.card>h5 {
+    font-size: 1.2rem;
+}
+
+.card>p {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+
+.page-title:hover>h1 {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFA500;
+}
+
+.page-title:hover>svg {
+    filter: drop-shadow(0 0 10px #FFD700) drop-shadow(0 0 20px #FFD700) drop-shadow(0 0 30px #FFD700);
+}
+
+.page-title h1 {
+    transition: text-shadow 0.4s ease-in-out;
+
+}
+
+.page-title svg {
+    width: 3em;
+    height: 3em;
+    fill: white;
+    transition: filter 0.4s ease-in-out;
+
+}
+
+.sidebar {
+    height: 100%;
+    color: white;
+    background-color: dodgerblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, fr);
+    align-content: start;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 2rem;
+}
+
+.sidebar li:hover {
+    font-size: 2rem;
+    color: gold;
+    border-bottom: 2px solid gold;
+
+    & svg {
+        fill: gold;
+    }
+}
+
+.sidebar ul svg {
+    width: 1.25em;
+    height: 1.25em;
+    fill: white;
+}
+
+.profile-picture {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-pic {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.news {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.news .announcements {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 1);
+    margin-bottom: 4rem;
+}
+
+.announcement {
+    border-bottom: 2px solid lightgray;
+    padding: 10px;
+}
+
+.announcement:last-child {
+    border: none;
+}
+
+.announcement h5 {
+    font-size: 1rem;
+}
+
+.announcement p {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+
+.news .trending {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 1);
+
+}
+
+.person img {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.trending .person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.person-info h6 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.person-info p {
+    font-size: 0.9rem;
+    color: #999;
+}
